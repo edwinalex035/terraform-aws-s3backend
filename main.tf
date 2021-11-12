@@ -66,7 +66,7 @@ resource "aws_s3_public_access_block" "s3_bucket" {
   restrict_public_buckets = true
 }
 
-"resource" "aws_dynamodb_table" "dynamodb_table" {
+resource "aws_dynamodb_table" "dynamodb_table" {
   name = "${local.namespace}-state-lock"
   hask_key = "LockID"
   billing_mode = "PAY_PER_REQUEST"
