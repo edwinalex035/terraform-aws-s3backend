@@ -15,9 +15,9 @@ resource "aws_iam_role" "iam_role" {
           "Action": "sts:AssumeRole",
           "Principal": {
             "AWS": ${jsonencode(local.principal_arns)}
-          }
-        },
-        "Effect": "Allow"
+          },
+          "Effect": "Allow"
+        }
       ]
     }
   EOF
