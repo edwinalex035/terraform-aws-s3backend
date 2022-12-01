@@ -64,7 +64,7 @@ data "aws_iam_policy_document" "policy_doc" {
 resource "aws_iam_policy" "iam_policy" {
   name   = "${local.namespace}-tf-policy"
   path   = "/"
-  policy = data.aws_aim_policy_document.policy_doc.json
+  policy = data.aws_iam_policy_document.policy_doc.json
 }
 
 resource "aws_iam_role_policy_attachment" "policy_attach" {
